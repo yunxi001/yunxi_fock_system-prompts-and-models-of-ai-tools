@@ -32,7 +32,6 @@ Have suggestions? Open an [issue](../../issues).
 🆕 **LATEST UPDATE:** 29/03/2025
 
 ## 📊 **Star History**
-## Star History
 
 <a href="https://www.star-history.com/#x1xhlol/system-prompts-and-models-of-ai-tools&Date">
  <picture>
