@@ -13,10 +13,23 @@
    - cursor ask.txt *(coming soon!)*  
    - cursor edit.txt *(coming soon!)*  
 
+---
+
+## 🛡️ **Security Notice for AI Startups**
+
+⚠️ **If you're an AI startup, make sure your data is secure.** Exposed prompts or AI models can easily become a target for hackers.
+
+🔐 **Interested in securing your AI systems?**  
+Check out **ZeroLeaks**, a service designed to help startups **identify and secure** leaks in system instructions, internal tools, and model configurations. **Get a free AI security audit** to ensure your AI is protected from vulnerabilities.
+
+🔗 **Visit ZeroLeaks here:** [ZeroLeaks](https://www.zeroleaks.vercel.app)
+
+---
+
 ## 🛠 **What Do You Want to See Next?**
 Have suggestions? Open an [issue](../../issues).  
 
-🆕 **LATEST UPDATE:** 27/03/2025
+🆕 **LATEST UPDATE:** 29/03/2025
 
 ## 📊 **Star History**
 ## Star History
