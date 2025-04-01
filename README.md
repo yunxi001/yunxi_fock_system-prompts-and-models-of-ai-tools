@@ -29,7 +29,7 @@ Check out **ZeroLeaks**, a service designed to help startups **identify and secu
 ## 🛠 **What Do You Want to See Next?**
 Have suggestions? Open an [issue](../../issues).  
 
-🆕 **LATEST UPDATE:** 31/03/2025
+🆕 **LATEST UPDATE:** 01/04/2025
 
 ## 📊 **Star History**
 
