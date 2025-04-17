@@ -1,6 +1,6 @@
-# **FULL v0, Cursor, Manus, Same.dev & Lovable System Prompts & AI Models**  
+# **FULL v0, Cursor, Manus, Same.dev, Lovable & Devin AI System Prompts & AI Models**  
 
-🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev & Lovable system prompts and internal tools.**
+🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable & Devin AIsystem prompts and internal tools.**
 
 📜 Over **5,500+ lines** of insights into their structure and functionality.  
 
@@ -9,6 +9,7 @@
 - **Manus Folder**
 - **Same.dev Folder**
 - **Lovable Folder**
+- **Devin AI Folder**
 - **Cursor Folder**  
    - cursor ask.txt *(coming soon!)*  
    - cursor edit.txt *(coming soon!)*  
