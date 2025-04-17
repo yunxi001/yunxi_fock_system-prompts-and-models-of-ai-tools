@@ -1,6 +1,6 @@
 # **FULL v0, Cursor, Manus, Same.dev, Lovable & Devin AI System Prompts, Tools & AI Models**  
 
-🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable & Devin AIsystem prompts and internal tools.**
+🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable & Devin AI system prompts and internal tools.**
 
 📜 Over **5,500+ lines** of insights into their structure and functionality.  
 
