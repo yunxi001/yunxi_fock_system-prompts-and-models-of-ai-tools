@@ -28,8 +28,10 @@ Check out **ZeroLeaks**, a service designed to help startups **identify and secu
 - X: NotLucknite
 ---
 
-## 🛠 **What Do You Want to See Next?**
-Have suggestions? Open an [issue](../../issues).  
+## 🛠 **Roadmap & Feedback**
+
+🚨 **Note:** We no longer use GitHub issues for roadmap and feedback.  
+Please visit [System Prompts Roadmap & Feedback](https://systemprompts.featurebase.app/) to share your suggestions and track upcoming features.
 
 🆕 **LATEST UPDATE:** 17/04/2025
 
@@ -47,4 +49,4 @@ Have suggestions? Open an [issue](../../issues).
 ✖ **X:** [NotLucknite](https://x.com/NotLucknite)  
 💬 **Discord:** `x1xh`  
 
-⭐ **Drop a star if you find this useful!**  
+⭐ **Drop a star if you find this useful!**
