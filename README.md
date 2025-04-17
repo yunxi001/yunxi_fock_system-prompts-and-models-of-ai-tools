@@ -23,8 +23,8 @@
 🔐 **Interested in securing your AI systems?**  
 Check out **ZeroLeaks**, a service designed to help startups **identify and secure** leaks in system instructions, internal tools, and model configurations. **Get a free AI security audit** to ensure your AI is protected from vulnerabilities.
 
-🔗 **Visit ZeroLeaks here:** https://zeroleaks.vercel.app/
-
+🔗 **Contact Us here:** 
+X: NotLucknite
 ---
 
 ## 🛠 **What Do You Want to See Next?**
