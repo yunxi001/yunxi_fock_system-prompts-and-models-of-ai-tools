@@ -7,7 +7,6 @@
 ## 📂 **Available Files**
 - **v0 Folder**  
 - **Manus Folder**
-- **Same.dev Folder**
 - **Lovable Folder**
 - **Devin Folder**
 - **Replit Folder**
