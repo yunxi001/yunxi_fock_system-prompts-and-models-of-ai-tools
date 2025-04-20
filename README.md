@@ -10,6 +10,7 @@
 - **Lovable Folder**
 - **Devin Folder**
 - **Replit Folder**
+- **RooCode folder (already open source)**
 - **Cursor Folder**  
    - cursor ask.txt *(coming soon!)*  
    - cursor edit.txt *(coming soon!)*  
