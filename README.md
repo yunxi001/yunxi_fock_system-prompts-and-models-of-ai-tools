@@ -12,7 +12,7 @@
 - **Same.dev Folder**
 - **Replit Folder**
 - **Windsurf Agent folder**
-- **VSCode Agent folder**
+- **VSCode (Copilot) Agent folder**
 - **Cursor Folder**
 - **Open Source prompts folder**
   - Codex CLI
