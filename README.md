@@ -9,6 +9,7 @@
 - **Manus Folder**
 - **Lovable Folder**
 - **Devin Folder**
+- **Same.dev Folder**
 - **Replit Folder**
 - **Windsurf Agent folder**
 - **Cursor Folder**
