@@ -1,6 +1,6 @@
-# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent & Windsurf Agent (And other Open Sourced) System Prompts, Tools & AI Models**  
+# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent & VSCode Agent (And other Open Sourced) System Prompts, Tools & AI Models**  
 
-🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent & Windsurf Agent system prompts and internal tools.**
+🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent & VSCode Agent system prompts and internal tools.**
 
 📜 Over **6,500+ lines** of insights into their structure and functionality.  
 
@@ -12,6 +12,7 @@
 - **Same.dev Folder**
 - **Replit Folder**
 - **Windsurf Agent folder**
+- **VSCode Agent folder**
 - **Cursor Folder**
 - **Open Source prompts folder**
   - Codex CLI
