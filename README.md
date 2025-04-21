@@ -1,4 +1,4 @@
-# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent & Windsurf Agent System Prompts, Tools & AI Models**  
+# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent & Windsurf Agent (And other Open Sourced) System Prompts, Tools & AI Models**  
 
 🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent & Windsurf Agent system prompts and internal tools.**
 
