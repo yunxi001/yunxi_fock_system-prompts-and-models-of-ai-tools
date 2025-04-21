@@ -10,11 +10,12 @@
 - **Lovable Folder**
 - **Devin Folder**
 - **Replit Folder**
-- **RooCode folder (already open source)**
 - **Windsurf Agent folder**
-- **Cursor Folder**  
-   - cursor ask.txt *(coming soon!)*  
-   - cursor edit.txt *(coming soon!)*  
+- **Cursor Folder**
+- **Open Source prompts folder**
+  - Codex CLI
+  - Cline
+  - RooCode
 
 ---
 
