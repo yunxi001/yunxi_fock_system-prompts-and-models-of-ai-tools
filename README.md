@@ -1,6 +1,6 @@
 # **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent & VSCode Agent (And other Open Sourced) System Prompts, Tools & AI Models**  
 
-(I do not publish system prompts that I do not extract myself, except the already open sourced ones and Manus)
+(All the published system prompts are extracted by myself, except the already open sourced ones and Manus)
 
 🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent & VSCode Agent system prompts and internal tools.**
 
