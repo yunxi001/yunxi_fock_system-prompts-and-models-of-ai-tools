@@ -21,16 +21,18 @@
 
 ---
 
-## 🛡️ **Security Notice for AI Startups**
+## 🛡️ **Security Notice for AI Startups***
 
 ⚠️ **If you're an AI startup, make sure your data is secure.** Exposed prompts or AI models can easily become a target for hackers.
 
 🔐 **Interested in securing your AI systems?**  
 Check out **ZeroLeaks**, a service designed to help startups **identify and secure** leaks in system instructions, internal tools, and model configurations. **Get a free AI security audit** to ensure your AI is protected from vulnerabilities.
 
-🔗 **Contact Us here:** 
+🔗 **Contact Me here:** 
 
 - X: NotLucknite
+
+*The company is mine, this is not a 3rd party AD.
 ---
 
 ## 🛠 **Roadmap & Feedback**
