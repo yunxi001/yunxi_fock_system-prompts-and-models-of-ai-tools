@@ -19,6 +19,7 @@
 - **Open Source prompts folder**
   - Codex CLI
   - Cline
+  - Bolt
   - RooCode
 
 ---
