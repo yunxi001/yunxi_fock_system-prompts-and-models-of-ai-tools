@@ -1,0 +1,78 @@
+{
+"browser_preview"（浏览器预览）：{
+"schema"："<browser_preview>（{n"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"Url\":{\"type\":\"string\",\"description\":\"The URL of the target web server to provide a browser preview for.这应该包含方案（如 http:// 或 https://）、域（如 localhost 或 127.0.0.1）和端口（如 :8080），但没有路径。},\"Name\":{"type\":\"string\",\"description\": "目标网络服务器的简短名称 3-5 个字。应使用标题大小写，例如 "个人网站"。格式为一个简单的字符串，而不是标记符；请直接输出标题，不要在标题前加上'Title:'或类似的东西。"}},（"additionalProperties/":false,）,（"type/":（"object/"）,（"required/":[（"Url/",（"Name/"）]}n</browser_preview>"、
+"描述"："为网络服务器启动浏览器预览。这样用户就可以与网络服务器正常交互，并向 Cascade 提供来自网络服务器的控制台日志和其他信息。请注意，该工具调用不会自动为用户打开浏览器预览，用户必须点击提供的按钮之一才能在浏览器中打开浏览器预览。
+},
+"check_deploy_status"（检查部署状态）：{
+"schema"："<check_deploy_status>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"WindsurfDeploymentId\":{"type\":\"string\",\"description\":\"The Windsurf deployment ID for the deploy we want to check status for. This is NOT project_id.\"}},\"additionalProperties\":false,\"type\":\"object\",\"required\"}}.This is NOT a project_id.\"}},additionalProperties\":false,\"type\":\"object\",\"required\":[\"WindsurfDeploymentId\"]}n</check_deploy_status>"、
+"description"（描述）："使用网络应用程序的 windsurf_deployment_id 检查部署状态，并确定应用程序的构建是否成功以及是否已被认领。除非用户要求，否则不要运行该程序。它只能在调用 deploy_web_app 工具后运行。"
+},
+"codebase_search"：{
+"schema"："<codebase_search>n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"Query\":{\"type\":\"string\",\"description\":\"Search query\"},\"TargetDirectories\":{\"items\":{\"type\":\"string\"},\"type\":\"array\",\"description\":\要搜索的目录的绝对路径列表},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"Query\",\"TargetDirectories\"]}n</codebase_search>"、
+"描述"："从代码库中查找与搜索查询最相关的代码片段。当搜索查询更精确，与代码的功能或目的相关时，该功能的效果最好。如果问题非常宽泛，例如询问一个大型组件或系统的一般 "框架 "或 "实现"，搜索结果就会很差。只会显示顶部项目的完整代码内容，也可能会被截断。对于其他项目，它只会显示文档字符串和签名。使用具有相同路径和节点名称的 view_code_item，可以查看任何项目的完整代码内容。请注意，如果尝试搜索 500 个以上的文件，搜索结果的质量会大大降低。如果确实有必要，请尽量只搜索大量文件"。
+},
+"command_status"（命令状态）：{
+"schema"："<command_status>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",properties\:{"CommandId\":{\"type\:\"string\",description\:\"ID of the command to get status for\"},\"OutputPriority\"：{"type\":\"string\",（"enum\":[\"top\",\"bottom\",\"split\"],（"description":\"显示命令输出的优先级。必须是其中之一：top"（显示最老的行），"bottom"（显示最新的行），或者 "split"（优先显示最老和最新的行，不包括中间的行）},\"OutputCharacterCount\":{\"type\":\"integer\",\"description\":\"Number of characters to view.让这个数字越小越好，以免占用过多的内存。如果命令在此持续时间之前完成，此工具调用将提前返回。设置为 0 可以立即获取命令的状态。如果您只想等待命令完成，请设置为 60。"}},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"CommandId\",\"OutputPriority\",\"OutputCharacterCount\",\"WaitDurationSeconds\"]}\n</command_status>"、
+"description"（描述）："通过 ID 获取之前执行的终端命令的状态。返回当前状态（正在运行、已完成）、由输出优先级指定的输出行以及任何错误（如果存在）。除后台命令 ID 外，请勿尝试检查其他 ID 的状态"。
+},
+"创建内存"：{
+"schema"："<create_memory>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"Id\":{\"type\":\"string\",\"description\":\"Id of an existing MEMORY to update or delete.当创建一个新的 MEMORY 时，将此留空。},\"Title\":{"type\":\"string\",\"description\":\"新的或更新的 MEMORY 的描述性标题。创建或更新存储器时需要使用该标题。当删除一个现有的 MEMORY 时，请留空。},\"Content\":{"type（类型）":\"string（字符串）",\"description（描述）":\"一个新的或更新的 MEMORY 的内容。当删除一个现有的 MEMORY 时，将此留空。},\"CorpusNames\":{\"items\":{"type\":\"string\"},\"type\":\"array\",\"description\":\"与 MEMORY 关联的工作区的语料库名称。每个元素必须与系统提示中提供的语料库名称之一完全精确匹配，包括所有符号。只有在创建新的 MEMORY 时才会用到。这些标签将用于过滤或检索 MEMORY。仅在创建新 MEMORY 时使用。使用 snake_case.\"}, "Action\":{\"type\":\"string\",\"enum\":[\"create\",\"update\",\"delete\"],\"description\":\"The type of action to take on the MEMORY.必须是'create'（创建）、'update'（更新）或'delete'（删除）中的一种。\"}},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"Id\",\"Title\",\"Content\",\"CorpusNames\",\"Tags\",\"Action\",\"UserTriggered\"]}\n</create_memory>",
+"description"（描述）："在创建新的记忆之前，首先检查数据库中是否已经存在语义相关的记忆。如果发现，请更新它，而不是创建一个重复的记忆库。
+},
+"deploy_web_app"：{
+"schema"："<deploy_web_app>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"Framework\":{\"type\":\"string\",\"enum\":[\"eleventy\",\"angular\",\"astro\",\"create-react-app\",\"gatsby\",\"gridsome\",\"grunt\",\"hexo\",\"hugo\",\"hydrogen\",\"jekyll\",\"middleman\",\"mkdocs\",\"nextjs\",\"nuxtjs\",\"remix\",\"sveltekit\",\"svelte\"],\"description\":\网络应用程序的框架。\},\"ProjectPath\":{\"type\:\"string\",\"description\":\"The full absolute project path of the web application.\"},\"Subdomain\":{\"type\:\"string\",\"description\":\"Subdomain or project name used in the URL.如果是使用 project_id 部署到现有网站，请将其留空。对于新网站，子域应该是唯一的，并且与项目相关。},\"ProjectId\":{\"type\":\"string\",\"description\":\"网络应用程序的项目 ID（如果它存在于部署配置文件中）。如果是新网站或用户想重命名网站，请将其留空。如果是重新部署，请在部署配置文件中查找项目 ID，并使用完全相同的 ID。\"}},\"additionalProperties/":false,\"type/":\"object/",\"required/":[\"Framework/",\"ProjectPath/",\"Subdomain/",\"ProjectId/"]}\n</deploy_web_app>"、
+"描述"："将 JavaScript 网络应用程序部署到 Netlify 等部署提供商。无需构建网站。只需要源文件。请确保先运行 read_deployment_config 工具，并在尝试部署前创建所有缺失文件。如果要部署到现有站点，请使用 project_id 标识站点。如果部署的是新站点，请将 project_id 留空"。
+},
+"edit_file"（编辑文件）：{
+"schema"："<edit_file>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"CodeMarkdownLanguage\":{\"type\":\"string\",\"description\":\"Markdown language for the code block, e. g 'python' or 'javascript'\"},\"TargetFile\":{\"type\":\"string\",\"description\":\"Markdown language for the code block, e. g 'python' or 'javascript'\"}.g'python'或'javascript'（"},\"TargetFile\":{\"type\":\"string\",\"description\":\"The target file to modify.总是指定目标文件作为第一个参数。\},/"TargetLintErrorIds\:{\"items\:{\"type\:\"string\"},/"type\:\"array",/"description\:\"If applicable, IDs of lint errors this edit aims to fix (they'll have been given in recent IDE feedback).如果您认为该编辑可以修复衬垫错误，请指明衬垫 ID；如果该编辑与此无关，请不要指明。一个经验法则是，如果您的编辑受到了衬垫反馈的影响，请注明衬垫 ID。在这里要诚实判断。"}, "CodeEdit\":{\"type\":\"string\",\"description\":\"Specify ONLY the precise lines of code that you wish to edit.**永远不要指定或写出未更改的代码**。相反，请使用这个特殊的占位符来表示所有不变的代码：{{ ...}},（"additionalProperties/":false）,（"type/":）\"object/",（"required/":[\"CodeMarkdownLanguage/",\"TargetFile/",\"Instruction/",\"TargetLintErrorIds/",\"CodeEdit/"]}n</edit_file>"、
+"description"（描述）："请勿对同一文件进行并行编辑。请遵循以下规则：\n1.只指定你要编辑的准确代码行。**切勿指定或写出未修改的代码**。相反，请使用这种特殊的占位符来表示所有未修改的代码：{{ ...}}.\n3.要编辑同一文件中多行不相邻的代码，只需调用一次该工具。使用特殊占位符 {{ ... }} 依次指定每次编辑。}} 来表示已编辑行之间未更改的代码。下面是一个如何同时编辑三行不相邻代码的示例：\nCodeContent:\n{{ ...}}\nedited_line_1\n{{ ...}}\nedited_line_2\n{{ ...}}\nedited_line_3\n{{ ...}}\n\n5.您不能编辑文件扩展名：[您应在其他参数之前指定以下参数：[目标文件]"
+},
+"find_by_name"：{
+"schema"："<find_by_name>n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"SearchDirectory\":{\"type\":\"string\",\"description\":\"The directory to search within\"},\"Pattern\":{\"type\":\string\" ,\"description\": "可選的，要搜索的樣式，支持 glob 格式"},\"Excludes\":{\"items\":{"type\":\"string\"},\"type\":\"array\" ,\"description\"：\可選的，排除匹配給定 glob 模式的文件/目錄},{"Type\":{"type\":\"string\",\"description\":可選的，類型過濾器，enum=file,directory,any\"},\"MaxDepth\":{"type\"：\"可选的，搜索的最大深度"}, "Extensions/":{"items/":{"type/":\"string/"},\"type/":\"array/",\"description\"Optional, file extensions to include (without leading .)，匹配路径必须至少匹配其中一个扩展名},\"FullPath\":{\"type\:\"boolean\",\"description\":\"Optional, whether the full absolute path must match the glob pattern, default: only filename needs to match.当启用此标志时，请注意指定 glob 模式，例如，当启用 FullPath 时，模式 "*.py "将不会匹配文件"/foo/bar.py"，但模式 "**/*.py "会匹配。\"}},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"SearchDirectory\",\"Pattern\",\"Excludes\",\"Type\",\"MaxDepth\",\"Extensions\",\"FullPath\"]}\n</find_by_name>",
+"description"（描述）："使用 fd 搜索指定目录下的文件和子目录。\nSearch 使用智能大小写，默认情况下会忽略 gitignored 文件。\nPattern 和 Excludes 都使用 glob 格式。如果搜索的是扩展名，则无需同时指定 Pattern 和 Extensions。结果将包括类型、大小、修改时间和相对路径"。
+},
+"grep_search"：{
+"schema"："<grep_search>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"SearchPath\":{\"type\":\"string\",\"description\":\"要搜索的路径。可以是目录或文件。這是一個必填參數。},（"Query":{"type\":\"string\",（"description":\"要在文件中尋找的搜索詞或模式）,（"MatchPerLine":{"type\":\"boolean\",（"description":\"如果為真，將返回與查詢匹配的每一行，包括行號和匹配行的片段（等同於'git grep -nI'）。如果为 false，则只返回包含查询内容的文件名（相当于'git grep -l'）。支持文件模式（例如，"*.txt "表示所有 .txt 文件）或特定路径（例如，"path/to/file.txt "或 "path/to/dir"）。如果是在单个文件中进行搜索，则将其留空。\},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"SearchPath\",\"Query\",\"MatchPerLine\",\"Includes\",\"CaseInsensitive\"]}n</grep_search>"、
+"description"："结果以 JSON 格式返回，每个匹配结果都会收到：\n- Filename\n- LineNumber\n- LineContent：匹配行的内容\nTotal results are capped at 50 matches.使用 "包含 "选项按文件类型或特定路径过滤，以完善搜索"。
+},
+"list_dir"：{
+"schema"："<list_dir>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",properties\:{"DirectoryPath\":{\"type\:\"string\",description\:\"Path to list contents of, should be absolute path to a directory\"}},additionalProperties\:false,type\:\"object\",required\":[\"DirectoryPath\"]}n</list_dir>"、
+"描述"："列出一个目录的内容。目录路径必须是一个存在的目录的绝对路径。对于目录中的每个子目录，输出将包括：目录的相对路径、是目录还是文件、文件的字节大小、子目录的数量（递归）"。
+},
+"read_deployment_config"（读取部署配置）：{
+"schema"：\}},\"additionalProperties/":false,\"type/":\"object/",\"required/":[\"ProjectPath/"]}n</read_deployment_config>"、
+"description"（描述）："读取网络应用程序的部署配置，并确定应用程序是否已准备好部署。应仅用于为 deploy_web_app 工具做准备"。
+},
+"read_url_content"：{
+"schema"："<read_url_content>n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"Url\":{\"type\":\"string\",\"description\":\"URL to read content from\"}},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"Url\"]}\n</read_url_content>",
+"description"（描述）："从 URL 读取内容。URL 必须是 HTTP 或 HTTPS URL，指向可通过网络浏览器访问的有效互联网资源"。
+},
+"run_command"（运行命令）：{
+    "schema"："<run_command>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"CommandLine\":{\"type\":\"string\",\"description\":\"The exact command line string to execute.\},\"Cwd\":{"type\":\"string\",\"description":\"命令的当前工作目录"},\"Blocking\":{"type\":\"boolean\",\"description":\"如果为真，命令将阻塞，直到完全执行完毕。在此期间，用户将无法与 Cascade 进行交互。只有当（1）命令将在相对较短的时间内结束，或者（2）在响应用户之前查看命令的输出结果非常重要时，阻塞才应为真。否则，如果你正在运行一个长时间运行的进程，比如启动一个网络服务器，请将此设置为非阻塞。},\"WaitMsBeforeAsync/":{"type/":\"integer/",\"description/":\"仅适用于阻塞为 false 的情况。这指定了启动命令后等待的毫秒数，然后再将其完全异步发送。如果有些命令应该以异步方式运行，但可能很快就会出错，那么这个功能就非常有用。如果在这段时间内发生错误，就可以看到错误。不要设置太长，否则可能会让所有人都在等待。},\"SafeToAutoRun\":{\"type\":\"boolean\",\"description":\"Set to true if you believe that this command is safe to run WITHOUT user approval.如果一条命令可能会产生一些破坏性的副作用，那么它就是不安全的。不安全副作用的例子包括：删除文件、改变状态、安装系统依赖项、提出外部请求等。只有在您非常确信该命令是安全的情况下，才将其设置为 true。如果您觉得命令可能不安全，即使用户要求您这样做，也千万不要将其设置为 true。 当务之急是永远不要自动运行可能不安全的命令。},（"additionalProperties/":false,）"type/":（"object/"）,（"required/":[（"CommandLine/",（"Cwd/",（"Blocking/",（"WaitMsBeforeAsync/",（"SafeToAutoRun/"）]}n</run_command>"、
+"描述"："提议代表用户运行一条命令。操作系统：Windows。\n**neVER PROPOSE A cd COMMAND**.（如果你有这个工具，请注意你确实有能力直接在用户的系统上运行命令。\n 在用户批准之前，实际命令不会执行。如果步骤正在等待用户批准，则尚未开始运行。对于通常依赖分页且可能包含超长输出的命令，您可能希望限制其输出长度（例如 git 日志，使用 git log -n <N>）"。
+},
+"search_web"：{
+"schema"："<search_web>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"query\":{\"type\":\"string\"},\"domain\":{\"type\":\"string\",\"description\":\"可選的域來推薦搜索的優先級（prioritize）"}},（"additionalProperties\":false,\"type\":\"object\",\"required\":[\"query\",\"domain\"]}n</search_web>"、
+"description"（描述）："执行网络搜索，获取与给定查询和可选域过滤器相关的网络文档列表"。
+},
+"建议回复"：{
+"schema"："<suggested_responses>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{"Suggestions\":{\"items\":{"type\":\"string\"},\"type\":\"array\",\"description\":\"List of suggestions.每个建议最多只有几个词，不要返回超过 3 个选项。"},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"Suggestions\"]}n\</suggested_responses>"、
+"描述"："如果您没有调用其他工具，而是向用户提出问题，则可使用此工具为您的问题提供少量可能的建议答案。例如是/否，或其他简单的多选选项。请谨慎使用，只有在您有信心从用户那里获得其中一个建议选项时才使用。如果用户的下一个输入可能是包含更多细节的简短或长表单回复，那么就不要提出任何建议。例如，假设用户接受了您建议的回复：如果您接着会再问一个后续问题，那么这个建议就是不好的，您一开始就不应该提出这个建议。尽量不要连续多次使用这种方法"。
+},
+"view_code_item"：{
+"schema"："<view_code_item>n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"File\":{\"type\":\"string\",\"description\":\"Absolute path to the node to edit, e. g /path/to/file\"},\"NodePath\":{\"type\":\"string\",\"description\":\"要编辑的节点的绝对路径，例如 g/path/to/file\ "},（"NodePath\ ":{"type\":\"string\",（"description":\"文件中节点的路径，例如 package.class.FunctionName\ "}},（"additionalProperties\ ":false,（"type\":\"object\",（"required\":[\"NodePath\"]}n</view_code_item>"、
+"description"（描述）："查看代码项节点的内容，如文件中的类或函数。您必须使用完全限定的代码项名称，如 grep_search 工具返回的名称。例如，如果您有一个名为 `Foo` 的类，而您想查看 `Foo` 类中的函数定义 `bar`，则应使用 `Foo.bar` 作为 NodeName。如果代码库搜索工具已显示过某个符号的内容，则不要请求查看该符号。如果在文件中找不到符号，工具将返回空字符串"。
+},
+"view_file"（查看文件）：{
+"schema"："<view_file>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"AbsolutePath\":{\"type\":\"string\",\"description\":\"Path to file to view.必须是绝对路径。must be an absolute path./"},StartLine\:{\"type\:\"integer\",\"description\:\"Startline to view\"},EndLine\:{\"type\:\"integer\",\"description\:\"Endline to view, inclusive.This cannot be more than 200 lines away from StartLine\"},IncludeSummaryOfOtherLines\:{\"type\:\"boolean\",\"description\:\"If true, you will also get a condensed summary of full file contents in addition to the exact lines of code from StartLine to EndLine.\}},additionalProperties\:false,type\:\"object\",required\":[\"AbsolutePath\",\"StartLine\",\"EndLine\",\"IncludeSummaryOfOtherLines\"]}n</view_file>"、
+"描述"："查看文件内容。文件的行以 0 为索引，调用此工具的输出将是从 StartLine 到 EndLine（包括 StartLine 和 EndLine）的文件内容，以及 StartLine 和 EndLine 以外行的摘要。请注意，该调用一次最多只能查看 200 行。具体来说，每次调用该命令时，你应该：\n1)评估你所查看的文件内容是否足以完成任务。\n2)如果你所查看的文件内容不够，并且你怀疑它们可能在未显示的行中，主动再次调用该工具查看这些行。请记住，部分文件视图可能会遗漏关键的依赖关系、导入或功能"。
+},
+"view_web_document_content_chunk"：{
+"schema"："<view_web_document_content_chunk>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"url\":{"type\":\"string\",\"description\":\"The URL that the chunk belongs to.\},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"url\",\"position\"]}/n</view_web_document_content_chunk>"、
+"description"（描述）："使用 URL 和内容块位置查看特定的网络文档内容块。该 URL 必须已被 read_url_content 工具读取过，才能在该特定 URL 上使用"。
+},
+"write_to_file"（写入文件）：{
+"schema"："<write_to_file>\n{"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{\"TargetFile\":{\"type\":\"string\",\"description\":\"The target file to create and write code to.（必须先指定）。(必须先指定）。},\"CodeContent\":{\"type\:\"string\",\"description\":\"The code contents to write to the file.\"},\"EmptyFile\":{"type\:\"boolean\",\"description\":\"Set this to true to create an empty file.\"}},\"additionalProperties\":false,\"type\":\"object\",\"required\":[\"TargetFile\",\"CodeContent\",\"EmptyFile\"]}\n</write_to_file>",
+"描述"："使用该工具创建新文件。如果文件和任何父目录还不存在，则会为您创建。请按照以下说明操作：1.切勿使用此工具修改或覆盖现有文件。在调用此工具之前，请务必首先确认 TargetFile 不存在。2.您必须将 TargetFile 指定为第一个参数。请在任何代码内容之前指定完整的 TargetFile"。
+}
+}
